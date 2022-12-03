@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
+import { useFonts
+ } from "expo-font";
+import Login  from "./screens/Login";
+import Home from "./screens/Home";
 import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "react-native";
 
-export default function App() {
+// const Stack = createStackNavigator();
+
+
+const App = () => {
+
+  const [loaded] = useFonts({
+    InterBold : require("./assets/fonts/Inter-Bold.ttf"),  
+    InterSemiBold : require("./assets/fonts/Inter-SemiBold.ttf"),
+    InterMedium : require("./assets/fonts/Inter-Medium.ttf"),
+    InterRegular : require("./assets/fonts/Inter-Regular.ttf")
+
+  });
+
+  if (!loaded) {
+    return <Text>Loading</Text>;
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      fontFamily: 'InterMedium'
+    },
+  });
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Home/>
+      </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
