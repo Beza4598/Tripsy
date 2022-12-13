@@ -1,3 +1,4 @@
+import { ImageStore } from "react-native";
 import assets from "./assets";
 
 const TripBoardData = [
@@ -101,5 +102,32 @@ const TripBoardData = [
     ],
   },
 ];
+
+const Flights = [
+  {
+    id: "fl00",
+    dates: "4:07 AM - 7:12 AM",
+    flight_length: "6h 5m (Nonstop)",
+    price : "$453",
+    from_to : "NEWARK (EWR) --> Los An (LAX)",
+    airline: assets.united
+  },
+  {
+    id: "fl01",
+    dates: "6:00 AM - 9:02 AM",
+    flight_length: "6h 2m (Nonstop)",
+    price : "$414",
+    from_to : "NEWARK (EWR) --> Los An (LAX)",
+    airline: assets.united
+  },
+  {
+    id: "fl01",
+    dates: "6:00 AM - 9:02 AM",
+    flight_length: "6h 2m (Nonstop)",
+    price : "$389",
+    from_to : "NEWARK (EWR) --> Los An (LAX)",
+    airline: assets.continental
+  }
+]
 
 export { TripBoardData };

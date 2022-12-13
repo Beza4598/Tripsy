@@ -1,18 +1,23 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, ScrollView, View, SafeAreaView, Text, Image } from 'react-native'
 import React from 'react'
 import DiscoverCard from './DiscoverCard'
+import AddCard from './AddCard'
 
 const Discover = () => {
   return (
-    <View style = {styles.discover}>
+    <SafeAreaView style = {styles.discover}>
       <Text style= {styles.title}> My Travel Groups </Text>
       
-      <View style={styles.my_boards}>
-        <DiscoverCard />
-        <DiscoverCard />
-      </View>
+      <ScrollView contentContainerStyle={styles.my_boards}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}>
+          <DiscoverCard />
+          <DiscoverCard />
+          <DiscoverCard />
+          <AddCard />
+      </ScrollView>
 
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -32,7 +37,8 @@ const styles = StyleSheet.create({
         flexDirection : 'row',
         justifyContent: 'space-around',
         paddingLeft : '4%',
-        paddingRight : '4%'
+        paddingRight : '4%',
+
 
     }
 })

@@ -41,6 +41,8 @@ const styles = StyleSheet.create (
             },
             shadowOpacity: 0.10,
             elevation: .5,
+            marginLeft: 10,
+            marginRight: 10
         },
         imageStyle : {
             width: 125,
