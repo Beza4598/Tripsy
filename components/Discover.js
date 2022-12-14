@@ -3,7 +3,7 @@ import React from 'react'
 import DiscoverCard from './DiscoverCard'
 import AddCard from './AddCard'
 
-const Discover = () => {
+const Discover = visible => {
   return (
     <SafeAreaView style = {styles.discover}>
       <Text style= {styles.title}> My Travel Groups </Text>
@@ -14,7 +14,9 @@ const Discover = () => {
           <DiscoverCard />
           <DiscoverCard />
           <DiscoverCard />
-          <AddCard />
+          <AddCard
+              visible = {visible.visible}
+          />
       </ScrollView>
 
     </SafeAreaView>
@@ -38,7 +40,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         paddingLeft : '4%',
         paddingRight : '4%',
-
 
     }
 })
