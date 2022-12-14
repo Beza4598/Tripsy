@@ -3,19 +3,20 @@ import React from 'react'
 
 const PopUp = visible => {
   return (
-    <View style = {styles.discover}>
-        <View style={styles.right}>
-            <Pressable style={styles.exit} onPress={visible.visible}>
-            </Pressable>
-        </View>
-
-        <View style = {styles.new}>
-              <Text style ={styles.title}>New Travel Group</Text>
+    <View style = {styles.container}>
+        <View className="entry">
+              <h4>Group Name</h4>
           </View>
 
-          <View style = {styles.entry}>
-              <Text style ={styles.h4}>Invite from Contacts</Text>
-          </View>
+          <form onSubmit={}>
+              <div className="groupName">
+                  <input type="text" name="groupName" className="datafield"></input>
+              </div>
+              <div className="classButton">
+                  <input type="submit" className="button" value="Create Group"></input>
+              </div>
+
+          </Form>
 
     </View>
 

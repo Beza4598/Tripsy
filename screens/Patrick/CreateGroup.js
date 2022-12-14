@@ -1,7 +1,7 @@
 import {StyleSheet, View} from "react-native";
 import {StatusBar} from "expo-status-bar";
-import Button from "../../components/CreateGroup/ExitButton";
 import PopUp from "../../components/CreateGroup/PopUp";
+import Contacts from "../../components/CreateGroup/Contacts";
 
 const CreateGroup = visible => {
   return (
@@ -9,6 +9,7 @@ const CreateGroup = visible => {
       <PopUp
           visible={visible.visible}
       />
+      <Contacts />
 
     </View>
   )
@@ -16,12 +17,11 @@ const CreateGroup = visible => {
 
 const styles = StyleSheet.create({
   newGroupBox : {
-    backgroundColor: "gray",
-    marginLeft: '10%',
-    marginRight: '10%',
-    width: '80%',
-    height: '50%',
-    marginTop: '25%',
+    backgroundColor: "white",
+    marginLeft: '5%',
+    width: '90%',
+    height: '70%',
+    marginTop: '10%',
     borderRadius: 20,
   }
 })
