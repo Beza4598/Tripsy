@@ -2,6 +2,7 @@ import { useFonts
  } from "expo-font";
 import Login  from "./screens/Login";
 import Home from "./screens/Home";
+import Vote from "./screens/Vote";
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from "react-native";
 
@@ -32,7 +33,7 @@ const App = () => {
   
   return (
       <View style={styles.container}>
-        <Home/>
+        <Vote/>
       </View>
   );
 }
