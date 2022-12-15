@@ -5,6 +5,9 @@ import Home from "./screens/Home";
 import Vote from "./screens/Vote";
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from "react-native";
+import CreateGroup from "./screens/Patrick/CreateGroup"
+import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
+import React, {useState} from "react";
 
 // const Stack = createStackNavigator();
 
@@ -23,20 +26,21 @@ const App = () => {
     return <Text>Loading</Text>;
   }
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      fontFamily: 'InterMedium'
-    },
-  });
-  
   return (
       <View style={styles.container}>
         <Vote/>
       </View>
   );
 }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      margin: 'auto',
+      alignItems: 'center'
+    },
+  });
 
 
 
