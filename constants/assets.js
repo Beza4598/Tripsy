@@ -9,6 +9,9 @@ import car from "../assets/icons/car.png"
 import plane from "../assets/icons/plane.png"
 import beach from "../assets/icons/beach.png"
 import directions from "../assets/icons/directions.png"
+import voteYes from "../assets/icons/voteYes.png"
+import voteNo from "../assets/icons/voteNo.png"
+import backArrow from "../assets/icons/backArrow.png"
 
 
 import logo from   "../assets/images/logo.png";
@@ -29,6 +32,9 @@ export default {
   search,
   right,
   add,
+  voteYes,
+  voteNo,
+  backArrow,
 
   logo,
   turkey,
