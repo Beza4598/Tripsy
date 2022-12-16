@@ -6,9 +6,8 @@ import Modal from "react-native-modal";
 const AddCard = (visible) => {
   return (
     <View style={styles.cardContainer}>
-        <TouchableOpacity onPress={() => props.navigation.navigate('GroupDashboard')}>
-      {/*<TouchableOpacity onPress={visible.visible}>*/}
-        {/*<Image source={assets.add} style={styles.addButton}/>*/}
+      <TouchableOpacity onPress={visible.visible}>
+        <Image source={assets.add} style={styles.addButton}/>
       </TouchableOpacity>
 
     </View>

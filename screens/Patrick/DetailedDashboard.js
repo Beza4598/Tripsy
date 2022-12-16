@@ -4,14 +4,20 @@ import Map from "../../components/DetailedDashboard/Map.js";
 import DashboardPage from "./DashboardPage.js"
 import PollsPage from "./PollsPage.js"
 import {useState} from "react";
+import Modal from "react-native-modal";
 
 
-function TwoTierDashboard({navigation}) {
-  const [isPolls, setModalVisible] = useState(true);
+function TwoTierDashboard() {
+  const [isPolls, setModalVisible] = useState(false);
+  // const [isCreate, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isPolls);
   };
+
+  // const createPoll = () => {
+  //     setModalVisible(!isCreateVisible);
+  // }
 
   if (isPolls){
     return (
@@ -27,7 +33,8 @@ function TwoTierDashboard({navigation}) {
     <View style={styles.board}>
       <Map />
       <DashboardPage
-      polls={toggleModal}/>
+      polls={toggleModal} />
+
     </View>
   )
 }
@@ -36,7 +43,7 @@ const styles = StyleSheet.create({
   board: {
     backgroundColor: "white",
     paddingBottom: 10,
-    marginTop: '0%'
+    marginTop: '0%',
   }
 })
 

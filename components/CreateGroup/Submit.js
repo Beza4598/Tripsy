@@ -1,4 +1,4 @@
-import {StyleSheet, TextInput, View, TouchableOpacity, Text, Image, Pressable} from 'react-native'
+import {StyleSheet, KeyboardAvoidingView, Keyboard, TouchableWithoutFeedback, Platform, TextInput, View, TouchableOpacity, Text, Image, Pressable} from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 // https://github.com/APSL/react-native-keyboard-aware-scroll-view
 // https://www.freecodecamp.org/news/how-to-make-your-react-native-app-respond-gracefully-when-the-keyboard-pops-up-7442c1535580/
@@ -15,10 +15,12 @@ const PopUp = visible => {
 
 
         {/*</Form>*/}
+        <View style={styles.inputBackground}>
           <TextInput style={styles.input} placeholder="Group Name">
               {/*<input type="text" name="groupName" className="datafield"></input>*/}
 
           </TextInput>
+    </View>
 
           <TouchableOpacity style={styles.button}>
               <Text style={styles.h4}> Create Group </Text>
@@ -31,6 +33,7 @@ const PopUp = visible => {
 
 const styles = StyleSheet.create(
     {
+
         entry: {
             backgroundColor: "white",
             margin: '5%',
@@ -38,20 +41,27 @@ const styles = StyleSheet.create(
         groupName: {
             padding: 0,
             backgroundColor: 'rgba(0, 0, 0, 0.04)',
-            margin: 10,
             // display: "flex",
             // justifyContent: "center",
         },
         input: {
             backgroundColor: "white",
-            marginLeft: '5%',
-            marginRight: '5%',
-            marginBottom: '5%',
             paddingTop: '3%',
             paddingBottom: '3%',
             paddingLeft: '1%',
             borderRadius: 6,
             borderWidth: 1
+        },
+        inputBackground: {
+            backgroundColor: 'rgba(0, 0, 0, 0.04)',
+            paddingLeft: '2%',
+            paddingRight: '2%',
+            paddingTop: '3%',
+            paddingBottom: '3%',
+            marginLeft: '5%',
+            marginRight: '5%',
+            marginBottom: '5%',
+            borderRadius: 6,
         },
         classButton: {
             margin: "auto",

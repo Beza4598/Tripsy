@@ -35,11 +35,17 @@ const App = () => {
             <Stack.Screen
             name="Home"
             component={Home}
+            options={{headerShown:false}}
             />
           <Stack.Screen
               name="GroupDashboard"
               component={DetailedDashboard}
+              options={{headerShown:false}}
             />
+        {/*<Stack.Screen*/}
+        {/*    name={}*/}
+
+        {/*/>*/}
         </Stack.Navigator>
         </NavigationContainer>
   );

@@ -33,8 +33,7 @@ function Home(props) {
    </View>
 
    <View style={styles.my_boards}>
-      <Discover
-      visible={toggleModal}
+      <Discover visible={toggleModal}
       />
    </View>
 
