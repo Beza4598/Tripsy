@@ -2,8 +2,10 @@ import { StyleSheet, ScrollView, View, SafeAreaView, Text, Image } from 'react-n
 import React from 'react'
 import DiscoverCard from './DiscoverCard'
 import AddCard from './AddCard'
+import { useNavigation } from '@react-navigation/native';
 
-const Discover = visible => {
+const Discover = (visible) => {
+
   return (
     <SafeAreaView style = {styles.discover}>
       <Text style= {styles.title}> My Travel Groups </Text>
@@ -11,9 +13,9 @@ const Discover = visible => {
       <ScrollView contentContainerStyle={styles.my_boards}
         horizontal={true}
         showsHorizontalScrollIndicator={false}>
-          <DiscoverCard />
-          <DiscoverCard />
-          <DiscoverCard />
+          <DiscoverCard/>
+          <DiscoverCard/>
+          <DiscoverCard/>
           <AddCard
               visible = {visible.visible}
           />

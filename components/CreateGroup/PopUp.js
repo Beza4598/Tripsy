@@ -1,12 +1,12 @@
-import { StyleSheet, Pressable, View, Button, Text, Image } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Pressable, Text, Image } from 'react-native'
 import React from 'react'
 
 const PopUp = visible => {
   return (
-    <View style = {styles.discover}>
+    <View style = {styles.container}>
         <View style={styles.right}>
-            <Pressable style={styles.exit} onPress={visible.visible}>
-            </Pressable>
+            <TouchableOpacity style={styles.exit} onPress={visible.visible}>
+            </TouchableOpacity>
         </View>
 
         <View style = {styles.new}>
@@ -24,7 +24,7 @@ const PopUp = visible => {
 
 const styles = StyleSheet.create(
     {
-        discover : {
+        container: {
             paddingLeft: 5,
             paddingBottom: 3,
             borderRadius: 20,
@@ -44,13 +44,13 @@ const styles = StyleSheet.create(
             marginTop: 10,
         },
         new: {
-            paddingLeft: 15,
+            paddingLeft: '5%',
             marginTop: 15,
             marginBottom: 15,
         },
         entry: {
             width: '100%',
-            paddingLeft: 15,
+            paddingLeft: '5%',
             marginBottom: 15,
         },
         h4: {
