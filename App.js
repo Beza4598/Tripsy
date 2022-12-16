@@ -8,11 +8,15 @@ import { StatusBar } from "react-native";
 import CreateGroup from "./screens/Patrick/CreateGroup"
 import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
 import React, {useState} from "react";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 // const Stack = createStackNavigator();
 
 
 const App = () => {
+
+  const Stack = createNativeStackNavigator();
 
   const [loaded] = useFonts({
     InterBold : require("./assets/fonts/Inter-Bold.ttf"),  
