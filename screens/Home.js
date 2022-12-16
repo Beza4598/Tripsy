@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import TripBoardCard from '../components/TripBoardCard';
 import CreateGroup from "./Patrick/CreateGroup";
 import Modal from "react-native-modal";
-
+import FlightCardsDiscover from '../components/FlightCardsDiscover';
 
 function Home() {
     const [isModalVisible, setModalVisible] = useState(false);
@@ -40,7 +40,7 @@ function Home() {
     </Modal>
 
    <View style={styles.planning_dashboard}>
-      <TripBoardCard/>
+      <FlightCardsDiscover/>
    </View>
 
   </View>
