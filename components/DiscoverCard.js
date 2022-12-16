@@ -1,12 +1,16 @@
 import { TouchableOpacity,Image, StyleSheet, View, Text, Dimensions, ImageBackground } from 'react-native'
 import React from 'react'
 import { assets } from '../constants'
+import Dashboard from '../screens/Patrick/DetailedDashboard.js'
+import {useNavigation} from "@react-navigation/native";
 
 const DiscoverCard = (props) => {
+    const navigation = useNavigation();
+
   return (
     <View style={styles.cardContainer}>
       <ImageBackground style={styles.imageStyle} imageStyle={styles.imageStyle} source={assets.turkey}>
-        <TouchableOpacity onPress={()=> {}}>
+        <TouchableOpacity onPress={()=> navigation.navigate('GroupDashboard')}>
             <Image source={assets.add} style={styles.addButton}/>
         </TouchableOpacity>
         <Image source={assets.person01} style={styles.person1}/>
@@ -16,10 +20,11 @@ const DiscoverCard = (props) => {
     <View style={styles.cardInfo}>
       <Text style={styles.cardTitle}> Turkey Weekend </Text>
       <Text style={styles.dates}> Jun 6, 2002 - June 13 2022 </Text>
-      <Text style={styles.membersDetail}> {props.memeber_count} 2 Members </Text>
+      <Text style={styles.membersDetail}> {props.member_count} 2 Members </Text>
       
-      <TouchableOpacity onPress={()=> {}}>
-            <Image source={assets.right} style={styles.enter_button} />
+      <TouchableOpacity>
+            <Image source={assets.right} style={styles.enter_button}
+                   />
         </TouchableOpacity>
 
     </View>
