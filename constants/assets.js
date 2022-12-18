@@ -9,6 +9,10 @@ import car from "../assets/icons/car.png"
 import plane from "../assets/icons/plane.png"
 import beach from "../assets/icons/beach.png"
 import directions from "../assets/icons/directions.png"
+import voteYes from "../assets/icons/voteYes.png"
+import voteNo from "../assets/icons/voteNo.png"
+import backArrow from "../assets/icons/backArrow.png"
+
 import united from "../assets/icons/united.png"
 import continental from "../assets/icons/continental.png"
 import create_poll from "../assets/icons/create_poll.png"
@@ -24,8 +28,6 @@ import person02 from "../assets/images/person02.png";
 import person03 from "../assets/images/person03.png";
 import person04 from "../assets/images/person04.png";
 
-import map from "../assets/images/Map.png"
-
 export default {
   badge,
   heart,
@@ -33,6 +35,9 @@ export default {
   search,
   right,
   add,
+  voteYes,
+  voteNo,
+  backArrow,
   create_poll,
 
   logo,
@@ -51,6 +56,4 @@ export default {
   person02,
   person03,
   person04,
-
-  map
 };

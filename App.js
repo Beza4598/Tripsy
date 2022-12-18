@@ -2,6 +2,7 @@ import { useFonts
  } from "expo-font";
 import Login  from "./screens/Login";
 import Home from "./screens/Home";
+import Vote from "./screens/Vote";
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from "react-native";
 import CreateGroup from "./screens/Patrick/CreateGroup"
@@ -30,18 +31,9 @@ const App = () => {
   }
 
   return (
-      <NavigationContainer>
-        <Stack.Navigator style={styles.container}>
-            <Stack.Screen
-            name="Home"
-            component={Home}
-            />
-          <Stack.Screen
-              name="GroupDashboard"
-              component={DetailedDashboard}
-            />
-        </Stack.Navigator>
-        </NavigationContainer>
+      <View style={styles.container}>
+        <Vote/>
+      </View>
   );
 }
 
