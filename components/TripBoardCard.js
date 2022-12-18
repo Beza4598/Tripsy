@@ -17,7 +17,7 @@ const TripBoardCard = () => {
 
         <View style={styles.choice_buttons}>
             <TouchableOpacity onPress={()=> {}}>
-                <Image style={styles.button_image} source={assets.plane} />
+                <Image style={styles.button_image} source={assets.plane}  />
             </TouchableOpacity>
             <TouchableOpacity onPress={()=> {}}>
                 <Image style={styles.button_image} source={assets.beach} />

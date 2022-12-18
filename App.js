@@ -7,11 +7,15 @@ import { StatusBar } from "react-native";
 import CreateGroup from "./screens/Patrick/CreateGroup"
 import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
 import React, {useState} from "react";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 // const Stack = createStackNavigator();
 
 
 const App = () => {
+
+  const Stack = createNativeStackNavigator();
 
   const [loaded] = useFonts({
     InterBold : require("./assets/fonts/Inter-Bold.ttf"),  
@@ -26,9 +30,18 @@ const App = () => {
   }
 
   return (
-      <View style={styles.container}>
-      <Home />
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator style={styles.container}>
+            <Stack.Screen
+            name="Home"
+            component={Home}
+            />
+          <Stack.Screen
+              name="GroupDashboard"
+              component={DetailedDashboard}
+            />
+        </Stack.Navigator>
+        </NavigationContainer>
   );
 }
 
