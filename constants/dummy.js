@@ -144,5 +144,3 @@ const Flights = [
 ]
 
 export { TripBoardData, Flights};
-
-export { TripBoardData, Flights };

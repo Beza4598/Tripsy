@@ -3,14 +3,15 @@ import React, {useState} from 'react'
 import {TripBoardData} from '../../constants/dummy.js'
 import Alert from "./Alert";
 import Modal from "react-native-modal";
+import Vote from "../../screens/Vote";
 
-const TransportationInformation = create => {
-    const [isPolls, setModalVisible] = useState(false);
-  // const [isCreate, setModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setModalVisible(!isPolls);
-  };
+const TransportationInformation = (vote) => {
+  //   const [isPolls, setModalVisible] = useState(false);
+  // // const [isCreate, setModalVisible] = useState(false);
+  //
+  // const toggleModal = () => {
+  //   setModalVisible(!isPolls);
+  // };
       return (
     <View>
           <View style={styles.information}>
@@ -29,8 +30,22 @@ const TransportationInformation = create => {
           <View style={styles.information}>
                 <Text style={styles.text}>Lodging Polls </Text>
           </View>
+
             <View style={styles.information}>
-                <Text style={styles.text}>Location Polls </Text>
+                <Text style={styles.text}>Activity Polls </Text>
+                <View style={styles.poll}>
+                    <TouchableOpacity onPress={vote.vote}>
+                        <Text style={styles.time}>Koko Cafe </Text>
+                        <Text style={styles.duration}>123 Westbury Drive, New York</Text>
+
+                        <Text style={styles.location}>4.7/5</Text>
+                        <Text style={styles.location}>4.7/5</Text>
+
+                        <View style={styles.totalVotes}>
+                            <View style={styles.votedAlready}/>
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
 
         </View>
