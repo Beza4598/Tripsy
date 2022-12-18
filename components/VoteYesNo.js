@@ -23,7 +23,7 @@ const VoteYesNo = (props) => {
 
   return (
     <View style={styles.voteButtonContainer}>
-      <TouchableOpacity style={{opacity:props.disabled ? 0.2 : 1}} 
+      <TouchableOpacity style={[styles.yesBtnActive, this.state.pressed ? {opacity: 0.2}:{}]} 
                         onPress={onPressYes} 
                         disabled={disabled1}>
         <Image source={assets.voteYes} style={this.state.active === 0 ? styles.yesBtnActive : styles.yesButton}/>
