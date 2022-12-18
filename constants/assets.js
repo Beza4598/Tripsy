@@ -13,6 +13,9 @@ import voteYes from "../assets/icons/voteYes.png"
 import voteNo from "../assets/icons/voteNo.png"
 import backArrow from "../assets/icons/backArrow.png"
 
+import united from "../assets/icons/united.png"
+import continental from "../assets/icons/continental.png"
+import create_poll from "../assets/icons/create_poll.png"
 
 import logo from   "../assets/images/logo.png";
 import eiffel from "../assets/images/eiffel.jpg";
@@ -35,6 +38,7 @@ export default {
   voteYes,
   voteNo,
   backArrow,
+  create_poll,
 
   logo,
   turkey,
@@ -45,6 +49,8 @@ export default {
   plane,
   beach,
   directions,
+  united,
+  continental,
 
   person01,
   person02,

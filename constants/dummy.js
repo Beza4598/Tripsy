@@ -105,7 +105,7 @@ const TripBoardData = [
 
 const Flights = [
   {
-    id: "fl00",
+    id: "1",
     dates: "4:07 AM - 7:12 AM",
     flight_length: "6h 5m (Nonstop)",
     price : "$453",
@@ -113,7 +113,7 @@ const Flights = [
     airline: assets.united
   },
   {
-    id: "fl01",
+    id: "2",
     dates: "6:00 AM - 9:02 AM",
     flight_length: "6h 2m (Nonstop)",
     price : "$414",
@@ -121,7 +121,7 @@ const Flights = [
     airline: assets.united
   },
   {
-    id: "fl01",
+    id: "3",
     dates: "6:00 AM - 9:02 AM",
     flight_length: "6h 2m (Nonstop)",
     price : "$389",
@@ -130,4 +130,4 @@ const Flights = [
   }
 ]
 
-export { TripBoardData };
+export { TripBoardData, Flights };
