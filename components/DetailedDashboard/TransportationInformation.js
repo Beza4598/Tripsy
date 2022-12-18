@@ -15,6 +15,16 @@ const TransportationInformation = create => {
     <View>
           <View style={styles.information}>
                 <Text style={styles.text}>Transportation Polls </Text>
+                <View style={styles.poll}>
+                    <Text style={styles.time}>4:07 AM - 7:12 AM</Text>
+                    <Text style={styles.duration}>6h 5m (Nonstop)</Text>
+
+                    <Text style={styles.location}>NEWARK (EWR) -> Los An..(LAX)</Text>
+
+                    <View style={styles.totalVotes}>
+                        <View style={styles.votedAlready}/>
+                    </View>
+                </View>
           </View>
           <View style={styles.information}>
                 <Text style={styles.text}>Lodging Polls </Text>
@@ -30,7 +40,7 @@ const TransportationInformation = create => {
 const styles = StyleSheet.create(
     {
         information: {
-            backgroundColor: "#E9E2E2",
+            backgroundColor: "rgba(0, 0, 0, 0.04)",
             marginLeft: '3%',
             marginRight: '3%',
             marginTop: '5%',
@@ -51,6 +61,34 @@ const styles = StyleSheet.create(
         text:{
             fontWeight: "bold",
             fontSize: 15
+        },
+        poll: {
+            backgroundColor: 'white',
+            marginTop: '3%',
+            borderRadius: '5%',
+        },
+        duration: {
+            marginLeft: '3%',
+            fontSize: 10
+        },
+        location:{
+            marginLeft: '3%',
+            marginTop: '3%',
+            fontSize: 12
+        },
+        time: {
+            marginLeft: '3%',
+            marginTop: '3%',
+            fontWeight: "bold"
+        },
+        votedAlready: {
+            backgroundColor: '8BD768',
+            width: '82%'
+        },
+        totalVotes: {
+            backgroundColor: 'E5E5E5',
+            width: '45%',
+            marginLeft: '3%',
         },
         newPoll:{
             backgroundColor: "#1B5D29",

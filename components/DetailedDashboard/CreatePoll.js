@@ -7,7 +7,7 @@ import Modal from "react-native-modal";
 const CreatePoll = create => {
       return (
     <View>
-            <TouchableOpacity style={styles.newPoll} onPress={create.create}>
+            <TouchableOpacity style={styles.newPoll}>
                   <Text style={styles.createPoll}>Create New Poll </Text>
             </TouchableOpacity>
 

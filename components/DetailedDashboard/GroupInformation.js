@@ -22,16 +22,19 @@ const GroupInformation = () => {
 
           <View style={styles.information}>
               <View style={styles.heading}>
-                <Text style={styles.text}>Group Members </Text>
+                <Text style={styles.text}>Group Members: 2</Text>
                 </View>
               <View style={styles.heading}>
                 <Text style={styles.text}>Location </Text>
+                  <Text style={styles.caption}>Still Deciding...</Text>
             </View>
               <View style={styles.heading}>
                 <Text style={styles.text}>Flight </Text>
+                  <Text style={styles.caption}>Still Deciding...</Text>
             </View>
               <View style={styles.heading}>
                 <Text style={styles.text}>Activities </Text>
+                  <Text style={styles.caption}>Still Deciding...</Text>
             </View>
 
         </View>
@@ -61,6 +64,10 @@ const styles = StyleSheet.create(
         text:{
             fontWeight: "bold",
             fontSize: 12
+        },
+        caption:{
+            marginTop: 10,
+            fontSize: 10
         }
     }
 )

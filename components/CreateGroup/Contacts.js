@@ -1,5 +1,6 @@
 import { StyleSheet, TextInput, View, Button, Text, Image } from 'react-native'
 import React from 'react'
+import {assets} from "../../constants";
 
 const Contacts = () => {
   return (
@@ -10,6 +11,7 @@ const Contacts = () => {
 
             <View style={styles.contactList}>
                 <View style={styles.left}>
+                    <Text style={styles.letters}> A </Text>
 
                     <Text style={styles.h5}>Alejandro </Text>
 
@@ -18,6 +20,8 @@ const Contacts = () => {
                     <Text style={styles.h5}>Amy Barns </Text>
 
                     <Text style={styles.h5}>Adrian Grey </Text>
+
+                    <Text style={styles.letters}> B </Text>
 
                     <Text style={styles.h5}>Benjamin </Text>
 
@@ -58,7 +62,7 @@ const styles = StyleSheet.create(
         },
         contactList: {
             backgroundColor: "white",
-            padding: 0,
+            paddingTop: '3%',
             marginBottom: 0,
             borderRadius: 10,
             width: '100%',
@@ -75,7 +79,7 @@ const styles = StyleSheet.create(
             color: "black",
             fontWeight: "15",
             marginTop: 0,
-            marginLeft: 10,
+            marginLeft: '10%',
             marginBottom: 10
         },
         invite: {
@@ -88,6 +92,14 @@ const styles = StyleSheet.create(
             paddingLeft: '5%',
             paddingTop: 10,
             paddingBottom: 10
+        },
+        name:{
+            flexDirection: "row",
+            height: '15%'
+        },
+        addButton: {
+            height: '50%',
+            width: '90%'
         },
         invite_text: {
             fontSize: 15,
@@ -103,6 +115,10 @@ const styles = StyleSheet.create(
         alphabet: {
             fontSize: 5,
             color: "#1A86E9"
+        },
+        letters:{
+            fontWeight: "bold",
+            marginLeft: '9%'
         },
         h6: {
             marginTop: 1,
