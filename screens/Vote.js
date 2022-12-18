@@ -7,12 +7,6 @@ import VoteYesNo from '../components/VoteYesNo'
 import { useState } from 'react'
 
 function Vote() {
-    const [disabled, setDisabled] = useState(false);
-    
-    const handleClick = () => {
-        IsLoggedIn && Like();
-        IsLoggedIn && setDisabled(true);
-    };
     
   return (
     <SafeAreaView style={styles.container}>
