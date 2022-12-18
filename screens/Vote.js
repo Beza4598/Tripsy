@@ -6,7 +6,7 @@ import PollHeader from '../components/PollHeader'
 import VoteYesNo from '../components/VoteYesNo'
 import { useState } from 'react'
 
-function Vote() {
+const Vote = (decision) => {
     
   return (
     <SafeAreaView style={styles.container}>
@@ -17,7 +17,7 @@ function Vote() {
             <PollData name='Britney Spears'/>
         </View>
         <View style={styles.vote}>
-            <VoteYesNo disabled={disabled} onClick={handleClick}/>
+            <VoteYesNo vote={decision.vote}/>
         </View>
     </SafeAreaView>
   )
@@ -27,8 +27,11 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
             backgroundColor: "white",
-            width: '100%',
-            height: '100%',
+            marginLeft: '5%',
+            marginRight: '5%',
+            marginTop: '20%',
+            marginBottom: '20%',
+        borderRadius: '10%'
     },
     header:{
         flex: 1,

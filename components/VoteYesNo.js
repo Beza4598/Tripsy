@@ -4,31 +4,30 @@ import { assets } from '../constants'
 import { useState } from 'react'
 
 
-const VoteYesNo = (props) => {
+const VoteYesNo = (decision) => {
 
-  const [disabled1, setDisabledNo] = useState(false);
-  const [disabled2, setDisabledYes] = useState(false);
-  
-  const onPressYes = () => {
-    setDisabledNo(true);
-    setDisabledYes(false);
-  }
-
-  state = { active: null };
-
-  const onPressNo = () => {
-    setDisabledNo(false);
-    setDisabledYes(true);
-  }
+  // const [disabled1, setDisabledNo] = useState(false);
+  // const [disabled2, setDisabledYes] = useState(false);
+  //
+  // const onPressYes = () => {
+  //   setDisabledNo(true);
+  //   setDisabledYes(false);
+  // }
+  //
+  // // state = { active: null };
+  //
+  // const onPressNo = () => {
+  //   setDisabledNo(false);
+  //   setDisabledYes(true);
+  // }
 
   return (
     <View style={styles.voteButtonContainer}>
-      <TouchableOpacity style={[styles.yesBtnActive, this.state.pressed ? {opacity: 0.2}:{}]} 
-                        onPress={onPressYes} 
-                        disabled={disabled1}>
-        <Image source={assets.voteYes} style={this.state.active === 0 ? styles.yesBtnActive : styles.yesButton}/>
+      <TouchableOpacity onPress={decision.vote}>
+        <Image source={assets.voteYes} style={styles.yesButton}/>
+
       </TouchableOpacity>
-      <TouchableOpacity onPress={onPressNo} disabled={disabled2}>
+      <TouchableOpacity onPress={decision.vote}>
         <Image source={assets.voteNo} style={styles.noButton}/>
       </TouchableOpacity> 
     </View>
@@ -54,7 +53,6 @@ const styles = StyleSheet.create (
         width: '70%',
         resizeMode: 'contain',
         marginTop: 'auto',
-        marginTop: 4,
     },
     noButton: {
       marginRight: '28%',
@@ -69,7 +67,6 @@ const styles = StyleSheet.create (
       width: '50%',
       resizeMode: 'contain',
       marginTop: 'auto',
-      marginTop: 4,
   },
     noBtnActive: {
       marginRight: '28%',

@@ -28,6 +28,9 @@ import person02 from "../assets/images/person02.png";
 import person03 from "../assets/images/person03.png";
 import person04 from "../assets/images/person04.png";
 
+import map from "../assets/images/map.png"
+import arrow from "../assets/images/backArrow.png"
+
 export default {
   badge,
   heart,
@@ -56,4 +59,7 @@ export default {
   person02,
   person03,
   person04,
+
+  map,
+  arrow
 };

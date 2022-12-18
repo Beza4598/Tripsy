@@ -1,15 +1,17 @@
 import { StyleSheet, TextInput, View, Button, Text, Image } from 'react-native'
 import React from 'react'
+import {assets} from "../../constants";
 
 const Contacts = () => {
   return (
         <View style={styles.contact}>
             <View style={styles.searchField}>
-                <Text style={styles.h4}>Search</Text>
+                <TextInput style={styles.h4} placeholder={"Search"}></TextInput>
             </View>
 
             <View style={styles.contactList}>
                 <View style={styles.left}>
+                    <Text style={styles.letters}> A </Text>
 
                     <Text style={styles.h5}>Alejandro </Text>
 
@@ -19,12 +21,14 @@ const Contacts = () => {
 
                     <Text style={styles.h5}>Adrian Grey </Text>
 
+                    <Text style={styles.letters}> B </Text>
+
                     <Text style={styles.h5}>Benjamin </Text>
 
                 </View>
-                {/*<View style={styles.right}>*/}
-                {/*    <Text style={styles.alphabet}>A B C D E F G H I J K L M N O P Q R S T U V W Z Y Z</Text>*/}
-                {/*</View>*/}
+                <View style={styles.right}>
+                    <Text style={styles.alphabet}>A B C D E F G H I J K L M N O P Q R S T U V W Z Y Z</Text>
+                </View>
             </View>
 
             <View style={styles.invite}>
@@ -45,7 +49,7 @@ const styles = StyleSheet.create(
             marginLeft: '5%',
             marginRight: '5%',
             paddingTop: '3%',
-            paddingBottom: '3%',
+            paddingBottom: '2%',
             paddingLeft: '2%',
             paddingRight: '2%'
         },
@@ -53,15 +57,17 @@ const styles = StyleSheet.create(
             backgroundColor: "white",
             marginBottom: 10,
             borderRadius: 5,
-            borderWidth: 0.5
+            borderWidth: 0.5,
+            padding: '1%',
         },
         contactList: {
             backgroundColor: "white",
-            padding: 0,
+            paddingTop: '3%',
             marginBottom: 0,
             borderRadius: 10,
             width: '100%',
-            borderWidth: 0.5
+            borderWidth: 0.5,
+            flexDirection: "row"
         },
         h4: {
             color: "black",
@@ -73,7 +79,7 @@ const styles = StyleSheet.create(
             color: "black",
             fontWeight: "15",
             marginTop: 0,
-            marginLeft: 10,
+            marginLeft: '10%',
             marginBottom: 10
         },
         invite: {
@@ -81,25 +87,38 @@ const styles = StyleSheet.create(
             alignItems: "left",
             width: '70%',
             marginLeft: '15%',
-            marginTop: '5%',
+            marginTop: '2%',
             borderRadius: 15,
             paddingLeft: '5%',
             paddingTop: 10,
             paddingBottom: 10
         },
+        name:{
+            flexDirection: "row",
+            height: '15%'
+        },
+        addButton: {
+            height: '50%',
+            width: '90%'
+        },
         invite_text: {
             fontSize: 15,
             color: "white"
         },
+        left:{
+            width: '90%',
+        },
         right: {
             width: '1%',
-            marginLeft: '90%',
-            marginTop: '-45%',
             display: "inline-block",
         },
         alphabet: {
             fontSize: 5,
             color: "#1A86E9"
+        },
+        letters:{
+            fontWeight: "bold",
+            marginLeft: '9%'
         },
         h6: {
             marginTop: 1,

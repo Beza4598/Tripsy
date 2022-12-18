@@ -31,9 +31,26 @@ const App = () => {
   }
 
   return (
-      <View style={styles.container}>
-        <Vote/>
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator style={styles.container}>
+            <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{headerShown:false}}
+            />
+          <Stack.Screen
+              name="GroupDashboard"
+              component={DetailedDashboard}
+              options={{headerShown:false}}
+            />
+
+        </Stack.Navigator>
+        </NavigationContainer>
+
+      // <View style={styles.container}>
+      //   <Vote/>
+      // </View>
+
   );
 }
 

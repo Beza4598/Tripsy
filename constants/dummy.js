@@ -8,7 +8,17 @@ const TripBoardData = [
     start_date : "07/17/2022",
     end_date : "07/20/2022",
     image: assets.paris,
-    
+
+    alerts: [
+      {
+        id: "Alert 1",
+        message: "Martha Stewart's Lodging Poll expires soon. Vote Now!"
+      },
+      {
+        id: "Alert 2",
+        message: "A trip Location has not been decided. Explore some options!"
+      }
+    ],
     members: [
       {
         id: "PER-01",
@@ -72,15 +82,8 @@ const TripBoardData = [
             ratings: "9.0/10 (455 reviews)"
           }
         }
-      ], 
-      alerts : [
-        "Martha Stewart's Lodging Poll expires soon. Vote Now!",
-        "A trip Location has not been decided. Explore some options!"
       ],
-
-
-    }
-    ]
+    }],
   },
   {
     id: "TRIP-02",
@@ -98,6 +101,16 @@ const TripBoardData = [
         id: "PER-02",
         name: "Jennifer Sia",
         image: assets.person03,
+      }
+    ],
+    alerts: [
+      {
+        id: "Alert 1",
+        message: "Martha Stewart's Lodging Poll expires soon. Vote Now!"
+      },
+      {
+        id: "Alert 2",
+        message: "A trip Location has not been decided. Explore some options!"
       }
     ],
   },
@@ -130,4 +143,4 @@ const Flights = [
   }
 ]
 
-export { TripBoardData, Flights };
+export { TripBoardData, Flights};
