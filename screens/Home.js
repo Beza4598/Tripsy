@@ -1,4 +1,4 @@
-import { StyleSheet, View, SafeArea, FlatList, Text } from 'react-native';
+import { StyleSheet, View, Button, FlatList, Text } from 'react-native';
 import Discover from '../components/Discover';
 import HomeHeader from '../components/HomeHeader';
 import { StatusBar } from 'expo-status-bar';
@@ -6,19 +6,21 @@ import React, { useState } from 'react';
 import TripBoardCard from '../components/TripBoardCard';
 import CreateGroup from "./Patrick/CreateGroup";
 import Modal from "react-native-modal";
+import FlightCardsDiscover from '../components/FlightCardsDiscover';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 
-function Home() {
-    const [isModalVisible, setModalVisible] = useState(false);
+
+function Home(props) {
+ const [isModalVisible, setModalVisible] = useState(false);
+  // const [isCreate, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
-  //   const [isOpen, setIsOpen] = useState(false);
-  //
-  // const createGroup = () => {
-  //   setIsOpen(!isOpen);
-  // }
+
+
 
   return (
 
@@ -28,10 +30,9 @@ function Home() {
    <View style={styles.header}>
     <HomeHeader name='Josh'/>
    </View>
-   
+
    <View style={styles.my_boards}>
-      <Discover
-      visible={toggleModal}
+      <Discover visible={toggleModal}
       />
    </View>
 
@@ -40,7 +41,7 @@ function Home() {
     </Modal>
 
    <View style={styles.planning_dashboard}>
-      <TripBoardCard/>
+      <FlightCardsDiscover/>
    </View>
 
   </View>

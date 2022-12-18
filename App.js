@@ -2,11 +2,14 @@ import { useFonts
  } from "expo-font";
 import Login  from "./screens/Login";
 import Home from "./screens/Home";
+import Vote from "./screens/Vote";
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from "react-native";
 import CreateGroup from "./screens/Patrick/CreateGroup"
 import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
 import React, {useState} from "react";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -36,6 +39,8 @@ function MyTabs() {
 
 const App = () => {
 
+  const Stack = createNativeStackNavigator();
+
   const [loaded] = useFonts({
     InterBold : require("./assets/fonts/Inter-Bold.ttf"),  
     InterSemiBold : require("./assets/fonts/Inter-SemiBold.ttf"),
@@ -49,9 +54,31 @@ const App = () => {
   }
 
   return (
+
     <NavigationContainer>
       <MyTabs />
     </NavigationContainer>
+
+      <NavigationContainer>
+        <Stack.Navigator style={styles.container}>
+            <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{headerShown:false}}
+            />
+          <Stack.Screen
+              name="GroupDashboard"
+              component={DetailedDashboard}
+              options={{headerShown:false}}
+            />
+
+        </Stack.Navigator>
+        </NavigationContainer>
+
+      // <View style={styles.container}>
+      //   <Vote/>
+      // </View>
+
   );
 }
 

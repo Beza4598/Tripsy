@@ -2,9 +2,8 @@ import { View, Image, StyleSheet, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { assets } from '../constants'
 import Modal from "react-native-modal";
-import CreateGroup from "../screens/Patrick/CreateGroup";
 
-const AddCard = visible => {
+const AddCard = (visible) => {
   return (
     <View style={styles.cardContainer}>
       <TouchableOpacity onPress={visible.visible}>

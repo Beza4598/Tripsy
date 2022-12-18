@@ -3,6 +3,7 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { assets } from '../constants'
 import { useState } from 'react'
+import { TripBoardData, Flights } from '../constants'
 
 
 const TripBoardCard = () => {
@@ -16,7 +17,7 @@ const TripBoardCard = () => {
 
         <View style={styles.choice_buttons}>
             <TouchableOpacity onPress={()=> {}}>
-                <Image style={styles.button_image} source={assets.plane} />
+                <Image style={styles.button_image} source={assets.plane}  />
             </TouchableOpacity>
             <TouchableOpacity onPress={()=> {}}>
                 <Image style={styles.button_image} source={assets.beach} />
