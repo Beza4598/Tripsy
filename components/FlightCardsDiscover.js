@@ -2,14 +2,15 @@ import { Image, StyleSheet, View, SafeAreaView, FlatList, Text, Button, Pressabl
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { assets } from '../constants'
-import { Flights } from '../constants'
+import { Polls } from '../constants'
 import FlightCard from './FlightCard'
 import StartPoll from './StartPoll'
+import PollCard from './PollCard'
 
 const FlightCardsDiscover = () => {
 
     const renderItem = ({item}) => (
-        <FlightCard dates={item.dates} price = {item.price} flight_length={item.flight_length} from_to={item.from_to} airline={item.airline} />
+        <PollCard group_name= {item.group_name} category={item.category} end_time= {item.end_time} user={item.user} user_image={item.user_image} />
       );
 
     
@@ -55,7 +56,7 @@ const FlightCardsDiscover = () => {
 
         <SafeAreaView style={styles.flights}>
         <FlatList
-                data={Flights}
+                data={Polls}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
             />

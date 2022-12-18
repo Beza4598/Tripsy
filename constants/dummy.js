@@ -130,4 +130,24 @@ const Flights = [
   }
 ]
 
-export { TripBoardData, Flights };
+const Polls = [
+  {
+    id : "1",
+    group_name: "Paris Weekend",
+    category: "Flight", 
+    end_time: "2 HRS", 
+    user:"Lady Gaga", 
+    user_image: person01
+  },
+
+  {
+    id : "2",
+    group_name: "Boating TRIP",
+    category: "Activity", 
+    end_time: "3 Days", 
+    user:"Sia", 
+    user_image: person02
+  }
+
+]
+export { TripBoardData, Flights, Polls };
