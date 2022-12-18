@@ -18,9 +18,8 @@ const PollHeader = () => {
 const styles = StyleSheet.create ({
      headerContainer : {
         flex: 1,
-        width: '100%',
         backgroundColor: '#FFFFFF',
-        marginLeft: 15,
+        margin: '5%',
     },
     title : {
         marginTop: '8%',

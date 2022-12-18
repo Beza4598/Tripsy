@@ -67,7 +67,7 @@ const styles = StyleSheet.create(
         },
         title : {
             fontSize: 20,
-            fontWeight: "10",
+            fontWeight: "bold",
             color: '#0A2E36',
         }
     }

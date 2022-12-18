@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
     },
     length : {
       fontSize: 9,
-      fontSize: 4,
       color: 'rgba(0, 0, 0, 0.6)'
     },
     price_info : {

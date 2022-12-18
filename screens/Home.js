@@ -13,16 +13,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 
 function Home(props) {
-    const [isModalVisible, setModalVisible] = useState(false);
+ const [isModalVisible, setModalVisible] = useState(false);
+  // const [isCreate, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
-  //   const [isOpen, setIsOpen] = useState(false);
-  //
-  // const createGroup = () => {
-  //   setIsOpen(!isOpen);
-  // }
+
 
 
   return (
@@ -35,8 +32,7 @@ function Home(props) {
    </View>
 
    <View style={styles.my_boards}>
-      <Discover
-      visible={toggleModal}
+      <Discover visible={toggleModal}
       />
    </View>
 
