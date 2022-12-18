@@ -6,8 +6,10 @@ import React, { useState } from 'react';
 import TripBoardCard from '../components/TripBoardCard';
 import CreateGroup from "./Patrick/CreateGroup";
 import Modal from "react-native-modal";
+import FlightCardsDiscover from '../components/FlightCardsDiscover';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 
 
 function Home(props) {
@@ -43,7 +45,7 @@ function Home(props) {
     </Modal>
 
    <View style={styles.planning_dashboard}>
-      <TripBoardCard/>
+      <FlightCardsDiscover/>
    </View>
 
   </View>
