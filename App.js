@@ -54,7 +54,6 @@ const App = () => {
   }
 
   return (
-
       <NavigationContainer>
         <Stack.Navigator style={styles.container}>
             <Stack.Screen
@@ -62,6 +61,7 @@ const App = () => {
             component={Home}
             options={{headerShown:false}}
             />
+            
           <Stack.Screen
               name="GroupDashboard"
               component={DetailedDashboard}
