@@ -25,6 +25,7 @@ const VoteYesNo = (decision) => {
     <View style={styles.voteButtonContainer}>
       <TouchableOpacity onPress={decision.vote}>
         <Image source={assets.voteYes} style={styles.yesButton}/>
+
       </TouchableOpacity>
       <TouchableOpacity onPress={decision.vote}>
         <Image source={assets.voteNo} style={styles.noButton}/>
