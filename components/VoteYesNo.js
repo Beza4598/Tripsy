@@ -3,7 +3,9 @@ import React from 'react'
 import { assets } from '../constants'
 import { useState } from 'react'
 
+
 const VoteYesNo = (props) => {
+
   const [disabled1, setDisabledNo] = useState(false);
   const [disabled2, setDisabledYes] = useState(false);
   
@@ -11,6 +13,8 @@ const VoteYesNo = (props) => {
     setDisabledNo(true);
     setDisabledYes(false);
   }
+
+  state = { active: null };
 
   const onPressNo = () => {
     setDisabledNo(false);
@@ -22,7 +26,7 @@ const VoteYesNo = (props) => {
       <TouchableOpacity style={{opacity:props.disabled ? 0.2 : 1}} 
                         onPress={onPressYes} 
                         disabled={disabled1}>
-        <Image source={assets.voteYes} style={styles.yesButton}/>
+        <Image source={assets.voteYes} style={this.state.active === 0 ? styles.yesBtnActive : styles.yesButton}/>
       </TouchableOpacity>
       <TouchableOpacity onPress={onPressNo} disabled={disabled2}>
         <Image source={assets.voteNo} style={styles.noButton}/>
@@ -58,7 +62,22 @@ const styles = StyleSheet.create (
       width: '70%',
       resizeMode: 'contain',
       marginTop: 'auto',
-    }
+    },
+    yesBtnActive: {
+      marginLeft: '30%',
+      height: '50%',
+      width: '50%',
+      resizeMode: 'contain',
+      marginTop: 'auto',
+      marginTop: 4,
+  },
+    noBtnActive: {
+      marginRight: '28%',
+      height: '50%',
+      width: '50%',
+      resizeMode: 'contain',
+      marginTop: 'auto',
+    },
   }
 )
 
