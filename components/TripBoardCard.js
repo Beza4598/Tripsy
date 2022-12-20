@@ -4,11 +4,18 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { assets } from '../constants'
 import { useState } from 'react'
 import { TripBoardData, Flights } from '../constants'
+import NewPollFlights from './NewPollFlights'
 
 
 const TripBoardCard = () => {
   const [inputOne, onChangeInputOne] = useState("From");
   const [inputTwo, onChangeInputTwo] = useState("To");
+
+  const [tempKey, setTempKey] = useState(0);
+  const onPress = () => {
+    <NewPollFlights/>
+    setTempKey(tempKey+1);
+  };
 
   return (
     <View style={styles.container}>
@@ -74,7 +81,7 @@ const TripBoardCard = () => {
 
             </View>
 
-            <Pressable style={styles.submit_button} onPress={()=> {}}>
+            <Pressable style={styles.submit_button} onPress={onPress}>
                 <Text style={styles.submit_text}>Submit</Text>
             </Pressable>
             
@@ -89,10 +96,10 @@ const styles = StyleSheet.create({
         flex: 3,
         backgroundColor: '#F1F1F1',
         padding: '5%',
-        marginLeft: '5%',
-        marginTop : '-12%',
+        marginLeft: '3%',
+        marginTop : '-20%',
         borderRadius: 25,
-        width: '85%',
+        width: '95%',
         justifyContent: 'center'
     },
     section_two: {

@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import StartPoll from './StartPoll'
+import { assets } from '../constants'
 
 const FlightCard = ({dates, price, flight_length, from_to, airline}) => {
   return (
@@ -20,8 +21,11 @@ const FlightCard = ({dates, price, flight_length, from_to, airline}) => {
           <Text style={styles.price_info}>
             Estimated (before tax)
           </Text>
-        </View>
 
+
+          
+        </View>
+        <Image  source={assets.add} style={styles.logo}/>
         </View>
 
         <Text style={styles.length}> 
@@ -44,7 +48,7 @@ const styles = StyleSheet.create({
       paddingBottom: '1%',
       padding: '4%',
       borderRadius: 10,
-      width: '76%',
+      width: '99%',
       height: '2%',
       justifyContent: 'center',
       marginTop: '3%',

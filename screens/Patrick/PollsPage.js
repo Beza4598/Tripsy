@@ -6,10 +6,12 @@ import React, {useState} from "react";
 import CreateGroup from "./CreateGroup";
 import Modal from "react-native-modal";
 import Vote from "../Vote.js"
+import NewPoll from "../CreateNewPoll.js"
 
 const PollsPage = (polls) => {
     const [isCreate, setModalVisible] = useState(false);
     const [isVote, setModal] = useState(false);
+    const [isPoll, setPoll] = useState(false);
   // const [isCreate, setModalVisible] = useState(false);
 
   const toggleModal = () => {
@@ -18,6 +20,10 @@ const PollsPage = (polls) => {
 
   const toggleVote = () => {
     setModal(!isVote)
+  }
+
+  const togglePoll = () => {
+      setPoll(!isPoll)
   }
 
   return (
@@ -30,7 +36,11 @@ const PollsPage = (polls) => {
             <Vote vote={toggleVote}/>
         </Modal>
 
-        <CreatePoll create={toggleModal}/>
+        <CreatePoll poll={togglePoll}/>
+
+        <Modal isVisible={isPoll}>
+            <NewPoll poll={togglePoll}/>
+        </Modal>
 
     </View>
   )

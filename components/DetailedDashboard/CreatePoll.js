@@ -4,10 +4,10 @@ import {TripBoardData} from '../../constants/dummy.js'
 import Alert from "./Alert";
 import Modal from "react-native-modal";
 
-const CreatePoll = create => {
+const CreatePoll = poll => {
       return (
     <View>
-            <TouchableOpacity style={styles.newPoll}>
+            <TouchableOpacity style={styles.newPoll} onPress={poll.poll}>
                   <Text style={styles.createPoll}>Create New Poll </Text>
             </TouchableOpacity>
 

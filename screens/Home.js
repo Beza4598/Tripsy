@@ -11,6 +11,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import UpcomingPolls from '../components/UpcomingPolls';
+
 
 const homeName = 'Home'
 const Tab = createBottomTabNavigator();
@@ -44,7 +46,7 @@ function Home(props) {
     </Modal>
 
    <View style={styles.planning_dashboard}>
-      <FlightCardsDiscover/>
+      <UpcomingPolls/>
    </View>
 
     {/*  <Tab.Navigator*/}
@@ -70,6 +72,7 @@ function Home(props) {
 const styles = StyleSheet.create({
   container : {
     flex: 1,
+    backgroundColor: '#FFFFFF'
   },
   my_boards : {
       flex : 2,

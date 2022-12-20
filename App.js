@@ -11,6 +11,33 @@ import React, {useState} from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import CreateNewPoll from "./screens/CreateNewPoll";
+import NewPollFlights from "./components/NewPollFlights";
+
+// const Stack = createStackNavigator();
+const homeName = 'Home'
+const Tab = createBottomTabNavigator();
+function MyTabs() {
+  return (
+    <Tab.Navigator
+    screenOptions={({route}) => ({
+      tabBarIcon: ({focused, color, size}) => {
+          let iconName;
+          let rn = route.name;
+          if (rn === homeName){
+              iconName = focused ? 'home' : 'home-outline';
+          }
+          return <Ionicons name={iconName} size={size} color={color} />;
+      },
+    })}
+    >
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false, tabBarShowLabel:false}}/>
+    </Tab.Navigator>
+  );
+}
+
 
 const App = () => {
 
@@ -29,8 +56,6 @@ const App = () => {
   }
 
   return (
-
-
       <NavigationContainer>
         <Stack.Navigator style={styles.container}>
             <Stack.Screen
@@ -38,6 +63,7 @@ const App = () => {
             component={Home}
             options={{headerShown:false}}
             />
+
           <Stack.Screen
               name="GroupDashboard"
               component={DetailedDashboard}
@@ -45,7 +71,7 @@ const App = () => {
             />
 
         </Stack.Navigator>
-        </NavigationContainer>
+      </NavigationContainer>
 
       // <View style={styles.container}>
       //   <Vote/>
