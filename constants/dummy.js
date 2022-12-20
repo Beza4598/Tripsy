@@ -150,7 +150,7 @@ const Polls = [
     category: "Flight", 
     end_time: "2 HRS", 
     user:"Lady Gaga", 
-    user_image: person01
+    user_image: assets.person01
   },
 
   {
@@ -158,8 +158,8 @@ const Polls = [
     group_name: "Boating TRIP",
     category: "Activity", 
     end_time: "3 Days", 
-    user:"Sia", 
-    user_image: person02
+    user: "Sia", 
+    user_image: assets.person02
   }
 
 ]
