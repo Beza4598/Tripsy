@@ -2,14 +2,20 @@ import { Image, StyleSheet, View, SafeAreaView, FlatList, Text, Button, Pressabl
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { assets } from '../constants'
-import { Flights } from '../constants'
+import { Polls } from '../constants'
 import FlightCard from './FlightCard'
 import StartPoll from './StartPoll'
+import PollCard from './PollCard'
+import { Flights } from '../constants'
 
 const FlightCardsDiscover = () => {
 
     const renderItem = ({item}) => (
-        <FlightCard dates={item.dates} price = {item.price} flight_length={item.flight_length} from_to={item.from_to} airline={item.airline} />
+        <FlightCard dates={item.dates}
+        flight_length={item.flight_length}
+        price={item.price}
+        from_to={item.from_to}
+        airline={item.airline} />
       );
 
     
@@ -48,9 +54,13 @@ const FlightCardsDiscover = () => {
                           style={styles.input}
                           value='Los An (LAX)'
                   />
+
+            <Pressable style={styles.button} onPress={()=>{}}>
+                <Text style={styles.button_text}>Search</Text>
+            </Pressable>
               
               </View>
-              
+
           </View>
 
         <SafeAreaView style={styles.flights}>
@@ -71,10 +81,10 @@ const styles = StyleSheet.create({
         flex: 3,
         backgroundColor: '#F1F1F1',
         padding: '5%',
-        marginLeft: '5%',
-        marginTop : '-12%',
+        marginLeft: '3%',
+        marginTop : '-20%',
         borderRadius: 25,
-        width: '85%',
+        width: '95%',
         justifyContent: 'center'
     },
     flights : {
@@ -111,14 +121,22 @@ const styles = StyleSheet.create({
         flexDirection : 'column',
     },
     button :{
-        borderRadius: 10,
-        backgroundColor: '#F1F1F1',
-        padding: '4%'
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 4,
+        height: 25,
+        width: 50,
+        backgroundColor: '#1B5D29',
+        marginTop: '5%',
+        marginLeft: '-2%'
+ 
     },
     button_text : {
-        fontSize: 11,
+        fontSize: 8,
+        lineHeight: 21,
         fontWeight: 'bold',
-        color: '#313131',
+        letterSpacing: 0.25,
+        color: 'white',
 
     },
     trip_buttons : {

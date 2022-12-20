@@ -9,6 +9,7 @@ import Modal from "react-native-modal";
 import FlightCardsDiscover from '../components/FlightCardsDiscover';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import UpcomingPolls from '../components/UpcomingPolls';
 
 
 
@@ -41,7 +42,7 @@ function Home(props) {
     </Modal>
 
    <View style={styles.planning_dashboard}>
-      <FlightCardsDiscover/>
+      <UpcomingPolls/>
    </View>
 
   </View>
@@ -52,6 +53,7 @@ function Home(props) {
 const styles = StyleSheet.create({
   container : {
     flex: 1,
+    backgroundColor: '#FFFFFF'
   },
   my_boards : {
       flex : 2,

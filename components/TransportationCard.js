@@ -4,7 +4,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { assets } from '../constants'
 import { useState } from 'react'
 
-
 const TripBoardCard = () => {
   const [inputOne, onChangeInputOne] = useState("From");
   const [inputTwo, onChangeInputTwo] = useState("To");
@@ -30,8 +29,51 @@ const TripBoardCard = () => {
         </View>
 
         <View style={styles.section_two}>
+        <View style={styles.trip_buttons}>
+            <Pressable style={styles.button} onPress={()=> {}}>
+                <Text style={styles.button_text}>One-way</Text>
+            </Pressable>
+
+            <Pressable style={styles.button} onPress={()=> {}}>
+                <Text style={styles.button_text}>Round-trip</Text>
+            </Pressable>
 
             
+            <Pressable style={styles.button} onPress={()=> {}}>
+                <Text style={styles.button_text}>Multi-city</Text>
+            </Pressable>
+
+            </View>
+
+            <View
+                style={styles.separator}
+            />
+
+        <View style = {styles.location}>
+            
+                <TextInput
+                        style={styles.input}
+                        onChangeText={(e) => {onChangeInputTwo}}
+                        value={inputOne}
+                />
+
+                <Image style={styles.directions} source={assets.directions} />
+
+                <TextInput
+                        style={styles.input}
+                        onChangeText={(e) => {onChangeInputTwo}}
+                        value={inputTwo}
+                />
+            
+            </View>
+
+            <View style={styles.dates}>
+
+            </View>
+
+            <Pressable style={styles.submit_button} onPress={()=> {}}>
+                <Text style={styles.submit_text}>Submit</Text>
+            </Pressable>
         </View>
       
     </View>

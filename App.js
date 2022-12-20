@@ -10,10 +10,10 @@ import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
 import React, {useState} from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import CreateNewPoll from "./screens/CreateNewPoll";
+import NewPollFlights from "./components/NewPollFlights";
 
 // const Stack = createStackNavigator();
 const homeName = 'Home'
@@ -54,18 +54,14 @@ const App = () => {
   }
 
   return (
-
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-
       <NavigationContainer>
         <Stack.Navigator style={styles.container}>
             <Stack.Screen
             name="Home"
-            component={Home}
+            component={CreateNewPoll}
             options={{headerShown:false}}
             />
+
           <Stack.Screen
               name="GroupDashboard"
               component={DetailedDashboard}
@@ -73,7 +69,7 @@ const App = () => {
             />
 
         </Stack.Navigator>
-        </NavigationContainer>
+      </NavigationContainer>
 
       // <View style={styles.container}>
       //   <Vote/>
