@@ -6,18 +6,18 @@ import PollHeader from '../components/PollHeader'
 import VoteYesNo from '../components/VoteYesNo'
 import { useState } from 'react'
 
-const Vote = (decision) => {
+const Vote = (vote) => {
     
   return (
     <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-            <PollHeader/>
+            <PollHeader vote={vote.vote}/>
         </View>
         <View style={styles.information}>
             <PollData name='Britney Spears'/>
         </View>
         <View style={styles.vote}>
-            <VoteYesNo vote={decision.vote}/>
+            <VoteYesNo vote={vote.vote}/>
         </View>
     </SafeAreaView>
   )

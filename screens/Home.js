@@ -9,8 +9,11 @@ import Modal from "react-native-modal";
 import FlightCardsDiscover from '../components/FlightCardsDiscover';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
-
+const homeName = 'Home'
+const Tab = createBottomTabNavigator();
 
 function Home(props) {
  const [isModalVisible, setModalVisible] = useState(false);
@@ -44,7 +47,22 @@ function Home(props) {
       <FlightCardsDiscover/>
    </View>
 
+    {/*  <Tab.Navigator*/}
+    {/*screenOptions={({route}) => ({*/}
+    {/*  tabBarIcon: ({focused, color, size}) => {*/}
+    {/*      let iconName;*/}
+    {/*      let rn = route.name;*/}
+    {/*      if (rn === homeName){*/}
+    {/*          iconName = focused ? 'home' : 'home-outline';*/}
+    {/*      }*/}
+    {/*      return <Ionicons name={iconName} size={size} color={color} />;*/}
+    {/*  },*/}
+    {/*})}*/}
+    {/*>*/}
+    {/*  <Tab.Screen name="Home" component={Home} options={{headerShown:false, tabBarShowLabel:false}}/>*/}
+    {/*</Tab.Navigator>*/}
   </View>
+
 
   )
 }

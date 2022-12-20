@@ -2,10 +2,10 @@ import {SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity} from 'rea
 import React from 'react'
 import { assets } from '../constants'
 
-const PollHeader = () => {
+const PollHeader = (vote) => {
   return (
     <SafeAreaView style = {styles.headerContainer}>
-      <TouchableOpacity onPress={()=> {}}>
+      <TouchableOpacity onPress={vote.vote}>
         <Image source={assets.backArrow} style={styles.backButton}/>
       </TouchableOpacity>
       <Text style={styles.title}> Activity Poll</Text>
