@@ -10,6 +10,7 @@ import DetailedDashboard from "./screens/Patrick/DetailedDashboard"
 import React, {useState} from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import CreateNewPoll from "./screens/CreateNewPoll";
@@ -37,6 +38,7 @@ function MyTabs() {
   );
 }
 
+
 const App = () => {
 
   const Stack = createNativeStackNavigator();
@@ -58,7 +60,7 @@ const App = () => {
         <Stack.Navigator style={styles.container}>
             <Stack.Screen
             name="Home"
-            component={CreateNewPoll}
+            component={Home}
             options={{headerShown:false}}
             />
 

@@ -22,9 +22,10 @@ const TransportationInformation = (vote) => {
 
                     <Text style={styles.location}>NEWARK (EWR) -> Los An..(LAX)</Text>
 
-                    <View style={styles.totalVotes}>
-                        <View style={styles.votedAlready}/>
-                    </View>
+                        <View style={styles.results}>
+                             <View style={styles.inProgress} />
+                            <Text style={styles.percent}> In-Progress</Text>
+                        </View>
                 </View>
           </View>
           <View style={styles.information}>
@@ -39,11 +40,13 @@ const TransportationInformation = (vote) => {
                         <Text style={styles.duration}>123 Westbury Drive, New York</Text>
 
                         <Text style={styles.location}>4.7/5</Text>
-                        <Text style={styles.location}>4.7/5</Text>
 
-                        <View style={styles.totalVotes}>
-                            <View style={styles.votedAlready}/>
+                        <View style={styles.results}>
+                             <View style={styles.inProgress} />
+                            <Text style={styles.percent}> In-Progress</Text>
                         </View>
+
+
                     </TouchableOpacity>
                 </View>
             </View>
@@ -58,12 +61,30 @@ const styles = StyleSheet.create(
             backgroundColor: "rgba(0, 0, 0, 0.04)",
             marginLeft: '3%',
             marginRight: '3%',
-            marginTop: '5%',
+            marginTop: '2%',
             borderRadius: '10%',
-            paddingTop: '4%',
+            paddingTop: '2%',
             paddingRight: '3%',
             paddingLeft: '3%',
-            paddingBottom: '4%'
+            paddingBottom: '2%'
+        },
+        results:{
+            flexDirection: "row",
+        },
+        inProgress:{
+            width: '50%',
+            backgroundColor: '#E5E5E5',
+            marginLeft: '3%',
+            marginTop: '5%',
+            marginBottom: '5%',
+            marginRight: '5%',
+            borderRadius: '5%'
+        },
+        percent: {
+            marginTop: '5%',
+            marginBottom: '5%',
+            marginRight: '5%',
+            fontWeight: "bold",
         },
         heading: {
             paddingTop: '2%',
@@ -75,11 +96,11 @@ const styles = StyleSheet.create(
         },
         text:{
             fontWeight: "bold",
-            fontSize: 15
+            fontSize: 15,
+            marginBottom: '2%'
         },
         poll: {
             backgroundColor: 'white',
-            marginTop: '3%',
             borderRadius: '5%',
         },
         duration: {

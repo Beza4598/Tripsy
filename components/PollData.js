@@ -20,7 +20,9 @@ const PollData = (props) => {
             </View>
             <Text style={styles.infoTitle}> Description</Text>
             <View style={styles.descriptionContainer}>
-                <Text style={styles.info}> Australian-inspired cafe in NYC</Text>
+                <Text style={styles.info}> This is a really cool cafe in the area! We can
+                    stop by before the museum and get brunch :D If we have time maybe
+                    we can walk around after. </Text>
             </View>
         </View>
         <View style={styles.userInfo}>

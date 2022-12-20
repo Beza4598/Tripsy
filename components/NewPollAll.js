@@ -4,7 +4,7 @@ import TripBoardCard from './TripBoardCard'
 import PollData from './PollData'
 import PollDetails from './PollDetails'
 
-const NewPollAll = () => {
+const NewPollAll = (poll) => {
     return (
         <View style={styles.big_container}>
           <Text style={styles.title} > New Poll </Text>
@@ -14,7 +14,7 @@ const NewPollAll = () => {
   
           <PollDetails/>
 
-          <Pressable style={styles.submit_button} onPress={()=> {}}>
+          <Pressable style={styles.submit_button} onPress={poll.poll}>
                 <Text style={styles.submit_text}>Submit</Text>
          </Pressable>
   

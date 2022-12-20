@@ -3,10 +3,10 @@ import React from 'react'
 import NewPollFlights from '../components/NewPollFlights'
 import NewPollAll from '../components/NewPollAll'
 
-const CreateNewPoll = () => {
+const CreateNewPoll = (poll) => {
   return (
     <View>
-      <NewPollFlights/>
+      <NewPollFlights poll={poll.poll} />
     </View>
   )
 }

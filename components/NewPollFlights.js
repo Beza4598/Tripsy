@@ -3,7 +3,7 @@ import React from 'react'
 import FlightCardsDiscover from './FlightCardsDiscover'
 import PollDetails from './PollDetails'
 
-const NewPollFlights = () => {
+const NewPollFlights = (poll) => {
     
     return (
       <View style={styles.big_container}>
@@ -14,7 +14,7 @@ const NewPollFlights = () => {
 
         <PollDetails/>
 
-        <Pressable style={styles.submit_button} onPress={()=> {}}>
+        <Pressable style={styles.submit_button} onPress={poll.poll}>
                 <Text style={styles.submit_text}>Submit</Text>
         </Pressable>
 
