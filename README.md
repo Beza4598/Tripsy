@@ -1,5 +1,7 @@
 # Tripsy
 UI Design Final Project
+
+
 To run this code
 1. Download Expo Go: https://expo.dev/client
 2. cd into this project directory and run npm start
